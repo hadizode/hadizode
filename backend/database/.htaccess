@@ -1,0 +1,5 @@
+<FilesMatch "\.(sql|lock)$"> 
+    Require all denied 
+</FilesMatch> 
+ 
+# Reminder: setup.php self-locks after first successful run (writes install.lock). 

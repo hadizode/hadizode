@@ -1,0 +1,18 @@
+# Admin JSON API endpoint security
+RewriteEngine On
+
+Options -Indexes
+
+# The shared bootstrap is not an endpoint — hard-deny via mod_rewrite
+# (more portable than <Files> across AllowOverride configs).
+RewriteRule ^_lib\.php$ - [F,L]
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

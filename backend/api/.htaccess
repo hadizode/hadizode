@@ -1,0 +1,22 @@
+# API endpoint security 
+RewriteEngine On 
+ 
+# Disable directory listing 
+Options -Indexes 
+ 
+# Block access to hidden files 
+<FilesMatch "^\."> 
+    Require all denied 
+</FilesMatch> 
+ 
+# Security headers for API responses 
+<IfModule mod_headers.c> 
+    Header set X-Content-Type-Options "nosniff" 
+    Header set X-Frame-Options "DENY" 
+    Header set X-XSS-Protection "1; mode=block" 
+    Header set Referrer-Policy "strict-origin-when-cross-origin" 
+</IfModule> 
+ 
+# Only allow specific HTTP methods (optional) 
+# RewriteCond %{REQUEST_METHOD} !^(GET|POST|OPTIONS)$ 
+# RewriteRule ^.*$ - [F] 

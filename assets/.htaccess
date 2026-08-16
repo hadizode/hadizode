@@ -1,0 +1,22 @@
+# Assets folder security 
+RewriteEngine On 
+ 
+# Disable directory listing 
+Options -Indexes 
+ 
+# Block access to hidden files 
+<FilesMatch "^\."> 
+    Require all denied 
+</FilesMatch> 
+ 
+# Allow only specific file types (images, fonts, etc.) 
+<FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|ico|woff|woff2|ttf|eot|css|js)$"> 
+    <IfModule mod_headers.c> 
+        Header set Cache-Control "public, max-age=31536000, immutable" 
+    </IfModule> 
+</FilesMatch> 
+ 
+# Enable compression for text-based assets 
+<IfModule mod_deflate.c> 
+    AddOutputFilterByType DEFLATE text/css application/javascript application/json image/svg+xml 
+</IfModule> 
