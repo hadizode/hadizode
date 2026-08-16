@@ -4,8 +4,8 @@
 -- ============================================================================= 
  
 ALTER TABLE form_fields  
-ADD COLUMN IF NOT EXISTS depends_on VARCHAR(80) NULL AFTER is_active, 
-ADD COLUMN IF NOT EXISTS depends_value VARCHAR(100) NULL AFTER depends_on; 
+ADD COLUMN depends_on VARCHAR(80) NULL AFTER is_active,
+ADD COLUMN depends_value VARCHAR(100) NULL AFTER depends_on;
  
 -- Example: Make "window_type" field appear only when "product_type" = "window" 
 -- UPDATE form_fields SET depends_on = 'product_type', depends_value = 'window' WHERE field_key = 'window_type'; 

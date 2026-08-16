@@ -13,9 +13,9 @@ ini_set('log_errors', '1');
 // Database credentials — EDIT for your hosting environment 
 // --------------------------------------------------------------------------- 
 define('DB_HOST', 'localhost'); 
-define('DB_NAME', 'north'); 
-define('DB_USER', 'me'); 
-define('DB_PASS', 'goodyear'); 
+define('DB_NAME', 'pzmvqbvj_north'); 
+define('DB_USER', 'pzmvqbvj_devme'); 
+define('DB_PASS', "?HGypFZT3?sp^r]O"); 
 define('DB_CHARSET', 'utf8mb4'); 
  
 // --------------------------------------------------------------------------- 
@@ -25,10 +25,10 @@ define('DB_CHARSET', 'utf8mb4');
 // inside it). 
 // --------------------------------------------------------------------------- 
 define('MEDIA_UPLOAD_DIR', realpath(__DIR__ . '/../../assets/media') ?: __DIR__ . '/../../assets/media'); 
-define('MEDIA_UPLOAD_URL', '/deploy/assets/media/'); 
+define('MEDIA_UPLOAD_URL', '/assets/media/'); 
  
 define('ORDER_UPLOAD_DIR', realpath(__DIR__ . '/../../assets/orders') ?: __DIR__ . '/../../assets/orders'); 
-define('ORDER_UPLOAD_URL', '/deploy/assets/orders/'); 
+define('ORDER_UPLOAD_URL', '/assets/orders/'); 
  
 define('ALLOWED_IMAGE_MIME', ['image/jpeg', 'image/png', 'image/webp']); 
 define('ALLOWED_IMAGE_EXT', ['jpg', 'jpeg', 'png', 'webp']); 
