@@ -13,9 +13,9 @@ ini_set('log_errors', '1');
 // Database credentials — EDIT for your hosting environment 
 // --------------------------------------------------------------------------- 
 define('DB_HOST', 'localhost'); 
-define('DB_NAME', 'pzmvqbvjـnorth'); 
-define('DB_USER', 'pzmvqbvjـdevme'); 
-define('DB_PASS', "c_Z&R.HY@12z6Ckl"); 
+define('DB_NAME', 'pzmvqbvj_north'); 
+define('DB_USER', 'pzmvqbvj_devme'); 
+define('DB_PASS', "C#GYPlZMUFWmfk7v"); 
 define('DB_CHARSET', 'utf8mb4'); 
  
 // --------------------------------------------------------------------------- 
